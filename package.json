@@ -1,0 +1,104 @@
+{
+  "name": "eslint-config-codedependant",
+  "version": "0.0.0",
+  "description": "base eslint config for codedependant projects",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./",
+    "tap": "tap",
+    "pretest": "npm run lint",
+    "test": "tap",
+    "release": "semantic-release"
+  },
+  "eslintConfig": {
+    "root": true,
+    "ignorePatterns": [
+      "node_modules/",
+      "coverage/"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2019
+    }
+  },
+  "release": {
+    "branches": [
+      "master"
+    ]
+  , "plugins": [
+      ["@semantic-release/commit-analyzer", {
+        "parserOpts": {
+          "noteKeywords": ["BREAKING", "BREAKING CHANGE", "BREAKING CHANGES"]
+        , "referenceActions": [
+            "close", "closes", "closed"
+          , "fix", "fixes", "fixed"
+          , "resolve", "resolves", "resolved"
+          ]
+        }
+      , "releaseRules": [
+          {"type": "build", "release": "patch"}
+        , {"type": "ci", "release": "patch"}
+        , {"type": "release", "release": "patch"}
+        , {"type": "chore", "release": "patch"}
+        , {"type": "refactor", "release": "patch"}
+        , {"type": "test", "release": "patch"}
+        , {"type": "doc", "release": "patch"}
+        , {"type": "lib", "release": "patch"}
+        ]
+      }]
+    , ["@semantic-release/release-notes-generator", null]
+    , ["@semantic-release/changelog", {
+        "changelogFile": "CHANGELOG.md"
+      }]
+    , ["@semantic-release/npm", null]
+    , ["@semantic-release/git", {
+        "assets": ["package.json", "CHANGELOG.md"]
+      }]
+    , ["@semantic-release/github", null]
+    ]
+  },
+  "peerDependencies": {
+    "eslint": ">= 6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/esatterwhite/eslint-config-codedependant.git"
+  },
+  "author": "Eric Satterwhite <esatterwhite@wi.rr.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/esatterwhite/eslint-config-codedependant/issues"
+  },
+  "homepage": "https://github.com/esatterwhite/eslint-config-codedependant#readme",
+  "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/github": "^7.0.7",
+    "eslint": "^7.8.1",
+    "semantic-release": "^17.1.1",
+    "tap": "^14.10.7"
+  },
+  "dependencies": {
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-sensible": "^2.1.0"
+  },
+  "tap": {
+    "100": true,
+    "esm": false,
+    "ts": false,
+    "jsx": false,
+    "browser": false,
+    "check-coverage": true,
+    "reporter": "classic",
+    "nyc-arg": [
+      "--all=true"
+    ],
+    "coverage-report": [
+      "text",
+      "text-summary",
+      "html"
+    ],
+    "files": [
+      "test/*.js"
+    ]
+  }
+}

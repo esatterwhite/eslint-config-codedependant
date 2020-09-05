@@ -1,0 +1,13 @@
+*.log
+npm-debug.log*
+coverage
+.nyc_output
+build/Release
+.node_repl_history
+*.tgz
+.env
+.next
+*.swp
+*.vim
+test/
+.npm
