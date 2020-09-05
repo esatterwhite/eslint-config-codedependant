@@ -1,3 +1,10 @@
+# 1.0.0 (2020-09-05)
+
+
+### Features
+
+* **pkg:** initial comment ([2c8dd52](https://github.com/esatterwhite/eslint-config-codedependant/commit/2c8dd52694c9322a3f2f9283fe67d2df8a6b2d80))
+
 # 2020-08-26, Version 5.3.0 (Stable)
 
 * [[0af2f101c4](https://github.com/answerbook/eslint-config-logdna/commit/0af2f101c4)] - **(SEMVER-MINOR)** config: enforce eol-last (Ryan Mottley) [LOG-6997](https://logdna.atlassian.net/browse/LOG-6997)

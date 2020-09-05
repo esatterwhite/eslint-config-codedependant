@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-codedependant",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "base eslint config for codedependant projects",
   "main": "index.js",
   "scripts": {
@@ -23,37 +23,92 @@
   "release": {
     "branches": [
       "master"
-    ]
-  , "plugins": [
-      ["@semantic-release/commit-analyzer", {
-        "parserOpts": {
-          "noteKeywords": ["BREAKING", "BREAKING CHANGE", "BREAKING CHANGES"]
-        , "referenceActions": [
-            "close", "closes", "closed"
-          , "fix", "fixes", "fixed"
-          , "resolve", "resolves", "resolved"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "parserOpts": {
+            "noteKeywords": [
+              "BREAKING",
+              "BREAKING CHANGE",
+              "BREAKING CHANGES"
+            ],
+            "referenceActions": [
+              "close",
+              "closes",
+              "closed",
+              "fix",
+              "fixes",
+              "fixed",
+              "resolve",
+              "resolves",
+              "resolved"
+            ]
+          },
+          "releaseRules": [
+            {
+              "type": "build",
+              "release": "patch"
+            },
+            {
+              "type": "ci",
+              "release": "patch"
+            },
+            {
+              "type": "release",
+              "release": "patch"
+            },
+            {
+              "type": "chore",
+              "release": "patch"
+            },
+            {
+              "type": "refactor",
+              "release": "patch"
+            },
+            {
+              "type": "test",
+              "release": "patch"
+            },
+            {
+              "type": "doc",
+              "release": "patch"
+            },
+            {
+              "type": "lib",
+              "release": "patch"
+            }
           ]
         }
-      , "releaseRules": [
-          {"type": "build", "release": "patch"}
-        , {"type": "ci", "release": "patch"}
-        , {"type": "release", "release": "patch"}
-        , {"type": "chore", "release": "patch"}
-        , {"type": "refactor", "release": "patch"}
-        , {"type": "test", "release": "patch"}
-        , {"type": "doc", "release": "patch"}
-        , {"type": "lib", "release": "patch"}
-        ]
-      }]
-    , ["@semantic-release/release-notes-generator", null]
-    , ["@semantic-release/changelog", {
-        "changelogFile": "CHANGELOG.md"
-      }]
-    , ["@semantic-release/npm", null]
-    , ["@semantic-release/git", {
-        "assets": ["package.json", "CHANGELOG.md"]
-      }]
-    , ["@semantic-release/github", null]
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        null
+      ],
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ],
+      [
+        "@semantic-release/npm",
+        null
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "CHANGELOG.md"
+          ]
+        }
+      ],
+      [
+        "@semantic-release/github",
+        null
+      ]
     ]
   },
   "peerDependencies": {
