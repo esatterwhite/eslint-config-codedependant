@@ -1,3 +1,5 @@
+## [1.0.1](https://github.com/esatterwhite/eslint-config-codedependant/compare/v1.0.0...v1.0.1) (2020-09-13)
+
 # 1.0.0 (2020-09-05)
 
 
