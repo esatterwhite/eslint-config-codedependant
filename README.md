@@ -1,4 +1,4 @@
-# eslint-config-reasonable
+# eslint-config-codedependant
 
 eslint config with reasonable comma first settings for node.js projects
 
