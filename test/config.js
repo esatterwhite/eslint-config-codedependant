@@ -5,7 +5,7 @@ const fs = require('fs')
 const {promisify} = require('util')
 const {test, threw} = require('tap')
 const {CLIEngine} = require('eslint')
-const CODE = path.join(__dirname, 'fixture')
+const CODE = path.join(__dirname, 'fixtures', 'valid-code')
 
 const readFile = promisify(fs.readFile)
 test('valid config', async (t) => {

@@ -22,9 +22,8 @@
     "accessor-pairs": 0,
     "array-bracket-spacing": [2, "never"],
     "array-callback-return": 2,
-    "arrow-parens": ["error", "as-needed", {
-      "requireForBlockBody": true
-    }],
+    "arrow-body-style": ["error", "always"],
+    "arrow-parens": ["error", "always"],
     "block-scoped-var": 2,
     "block-spacing": [2, "always"],
     "brace-style": [2, "1tbs", {
@@ -50,6 +49,7 @@
     }],
     "eol-last": [2, "always"],
     "eqeqeq": [2, "allow-null"],
+    "func-style": ["error", "declaration"],
     "handle-callback-err": [2, "^(error|err|er)"],
     "guard-for-in": 2,
     "indent": 0,
@@ -84,7 +84,7 @@
       }
     }],
     "linebreak-style": ["error", "unix"],
-    "max-len": [2, 160, {
+    "max-len": [2, 90, {
       "ignoreComments": true
     }],
     "no-alert": 2,
@@ -168,7 +168,8 @@
     "no-unused-labels": 2,
     "no-unused-vars": [2, {
       "vars": "all",
-      "args": "none"
+      "args": "none",
+      "ignoreRestSiblings": true
     }],
     "no-use-before-define": [2, {
       "functions": false

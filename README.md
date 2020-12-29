@@ -11,7 +11,7 @@ eslint config with reasonable comma first settings for node.js projects
 ### Installation
 
 ```bash
-> npm install @esatterwhite/eslint-config-reasonable
+> npm install eslint-config-codedependant
 ```
 
 ### Config Installation
