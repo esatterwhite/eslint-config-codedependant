@@ -1,5 +1,6 @@
 'use strict'
 
+// This is a very very long comment that should probably be on multiple line. But comments are ignored so this will not cause an error when the linter actually runs
 const path = require('path')
 const fs = require('fs')
 const {promisify} = require('util')
@@ -25,8 +26,9 @@ const isFoo = OPTIONS.FOO
   ? OPTIONS.BAR
   : OPTIONS.TEST
 
+const {TEST, BAR: notUsed, ...others} = OPTIONS
 function getOptions() {
-  return isFoo ? OPTIONS : null
+  return isFoo ? OPTIONS : others
 }
 
 function rand(bytes = 10, cb) {
@@ -61,6 +63,9 @@ function plugin(opts) {
     this.updated = new Date()
   }
 }
+
+const someArray = [1, 2, 3]
+console.log(someArray.map((a) => { return a + 1 }))
 
 module.exports = {
   ...OPTIONS
