@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/esatterwhite/eslint-config-codedependant/compare/v2.0.0...v2.1.0) (2021-01-01)
+
+
+### Features
+
+* **deps:** eslint-plugin-sensible@2.2.1 ([6af8191](https://github.com/esatterwhite/eslint-config-codedependant/commit/6af8191af80d66e89666b6ce7a310af3c5844f17))
+
 # [2.0.0](https://github.com/esatterwhite/eslint-config-codedependant/compare/v1.0.2...v2.0.0) (2020-12-29)
 
 
