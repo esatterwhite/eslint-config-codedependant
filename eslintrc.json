@@ -93,6 +93,7 @@
     "no-case-declarations": 2,
     "no-cond-assign": [2, "except-parens"],
     "no-const-assign": "error",
+    "no-debugger": "error",
     "no-div-regex": 0,
     "no-else-return": 0,
     "no-empty-function": [2, {
