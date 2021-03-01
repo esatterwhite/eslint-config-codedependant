@@ -1,3 +1,5 @@
+## [2.1.3](https://github.com/esatterwhite/eslint-config-codedependant/compare/v2.1.2...v2.1.3) (2021-03-01)
+
 ## [2.1.2](https://github.com/esatterwhite/eslint-config-codedependant/compare/v2.1.1...v2.1.2) (2021-03-01)
 
 ## [2.1.1](https://github.com/esatterwhite/eslint-config-codedependant/compare/v2.1.0...v2.1.1) (2021-02-12)
