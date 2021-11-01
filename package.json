@@ -133,7 +133,7 @@
   },
   "dependencies": {
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-sensible": "^2.2.1"
+    "eslint-plugin-sensible": "^3.0.0"
   },
   "tap": {
     "100": true,
