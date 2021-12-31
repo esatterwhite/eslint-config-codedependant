@@ -50,7 +50,7 @@
     "@codedependant/release-config-npm": "^1.0.4",
     "eslint": "^8.5.0",
     "eslint-config-codedependant": "^2.1.6",
-    "semantic-release": "^17.4.0",
+    "semantic-release": "^18.0.1",
     "tap": "^15.1.5"
   },
   "dependencies": {
