@@ -3,6 +3,13 @@
   "version": "2.1.6",
   "description": "base eslint config for codedependant projects",
   "main": "index.js",
+  "files": [
+    "index.js",
+    ".eslintrc.json",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
   "scripts": {
     "lint": "eslint ./",
     "tap": "tap",
@@ -17,98 +24,13 @@
       "coverage/"
     ],
     "parserOptions": {
-      "ecmaVersion": 2019
+      "ecmaVersion": 2020
     }
   },
   "release": {
+    "extends": "@codedependant/release-config-npm",
     "branches": [
       "master"
-    ],
-    "plugins": [
-      [
-        "@semantic-release/commit-analyzer",
-        {
-          "parserOpts": {
-            "noteKeywords": [
-              "BREAKING",
-              "BREAKING CHANGE",
-              "BREAKING CHANGES"
-            ],
-            "referenceActions": [
-              "close",
-              "closes",
-              "closed",
-              "fix",
-              "fixes",
-              "fixed",
-              "resolve",
-              "resolves",
-              "resolved"
-            ]
-          },
-          "releaseRules": [
-            {
-              "type": "build",
-              "release": "patch"
-            },
-            {
-              "type": "ci",
-              "release": "patch"
-            },
-            {
-              "type": "release",
-              "release": "patch"
-            },
-            {
-              "type": "chore",
-              "release": "patch"
-            },
-            {
-              "type": "refactor",
-              "release": "patch"
-            },
-            {
-              "type": "test",
-              "release": "patch"
-            },
-            {
-              "type": "doc",
-              "release": "patch"
-            },
-            {
-              "type": "lib",
-              "release": "patch"
-            }
-          ]
-        }
-      ],
-      [
-        "@semantic-release/release-notes-generator",
-        null
-      ],
-      [
-        "@semantic-release/changelog",
-        {
-          "changelogFile": "CHANGELOG.md"
-        }
-      ],
-      [
-        "@semantic-release/npm",
-        null
-      ],
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "package.json",
-            "CHANGELOG.md"
-          ]
-        }
-      ],
-      [
-        "@semantic-release/github",
-        null
-      ]
     ]
   },
   "peerDependencies": {
@@ -125,19 +47,18 @@
   },
   "homepage": "https://github.com/esatterwhite/eslint-config-codedependant#readme",
   "devDependencies": {
-    "@semantic-release/changelog": "^5.0.1",
-    "@semantic-release/git": "^9.0.0",
-    "eslint": "^7.22.0",
+    "@codedependant/release-config-npm": "^1.0.4",
+    "eslint": "^8.5.0",
+    "eslint-config-codedependant": "^2.1.6",
     "semantic-release": "^17.4.0",
-    "tap": "^14.11.0"
+    "tap": "^15.1.5"
   },
   "dependencies": {
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-sensible": "^2.2.1"
+    "eslint-plugin-sensible": "^3.0.0"
   },
   "tap": {
     "100": true,
-    "esm": false,
     "ts": false,
     "jsx": false,
     "browser": false,
