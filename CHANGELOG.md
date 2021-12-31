@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/esatterwhite/eslint-config-codedependant/compare/v2.1.6...v3.0.0) (2021-12-31)
+
+
+### Chores
+
+* **deps**: eslint-plugin-sensible@^3.0.0 [066dbe9](https://github.com/esatterwhite/eslint-config-codedependant/commit/066dbe9fc79fb1407a00252723a0118c0ab0805a) - Eric Satterwhite
+
+
+### **BREAKING CHANGES**
+
+* **deps:** eslint version expected to be at version 8
+
 ## [2.1.6](https://github.com/esatterwhite/eslint-config-codedependant/compare/v2.1.5...v2.1.6) (2021-03-15)
 
 ## [2.1.5](https://github.com/esatterwhite/eslint-config-codedependant/compare/v2.1.4...v2.1.5) (2021-03-01)
