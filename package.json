@@ -48,7 +48,7 @@
   "homepage": "https://github.com/esatterwhite/eslint-config-codedependant#readme",
   "devDependencies": {
     "@codedependant/release-config-npm": "^1.0.4",
-    "eslint": "^8.5.0",
+    "eslint": "^8.31.0",
     "eslint-config-codedependant": "^2.1.6",
     "semantic-release": "^17.4.0",
     "tap": "^15.1.5"
